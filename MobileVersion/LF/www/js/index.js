@@ -1,10 +1,9 @@
-angular.module('LostFound', ['ionic'])
+angular.module('LostFound', ['ionic', 'ngCordova'])
 
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
         $stateProvider
             
-         
 
             .state('main', {
                 url : '/main',
@@ -233,7 +232,7 @@ angular.module('LostFound', ['ionic'])
             }
         }];
     }])
-    .controller('reportitem2PageController', [ '$scope', '$state', function($scope, $state) {
+    .controller('reportitem2PageController', [ '$scope', '$state', '$cordovaCamera', function($scope, $state, $cordovaCamera) {
         $scope.navTitle = 'Report Item';
 
         $scope.leftButtons = [{
@@ -283,7 +282,7 @@ angular.module('LostFound', ['ionic'])
             }
         }];
     }])
-    .controller('myitems2PageController', [ '$scope', '$state', function($scope, $state) {
+    .controller('myitems2PageController', [ '$scope', '$state', '$cordovaCamera' , function($scope, $state, $cordovaCamera) {
         $scope.navTitle = 'myItems';
 
         $scope.leftButtons = [{
@@ -292,6 +291,37 @@ angular.module('LostFound', ['ionic'])
                 $scope.toggleMenu();
             }
         }];
+        $scope.takePicture = function() {
+        var options = { 
+        quality : 75, 
+        destinationType : Camera.DestinationType.DATA_URL, 
+        sourceType : Camera.PictureSourceType.CAMERA, 
+        allowEdit : true,
+        encodingType: Camera.EncodingType.JPEG,
+        targetWidth: 100,
+        targetHeight: 100,
+        popoverOptions: CameraPopoverOptions,
+        saveToPhotoAlbum: false
+    };
+
+    $cordovaCamera.getPicture(options).then(function(imageData) {
+      // Success! Image data is here
+    }, function(err) {
+      // An error occured. Show a message to the user
+      $window.alert('Should not see this stuff');
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
     }])
     .controller('commentsPageController', [ '$scope', '$state', function($scope, $state) {
         $scope.navTitle = 'Comments';
