@@ -241,7 +241,34 @@ padding-left: 10px;
   padding-top: 10px;
 
 }
+#LostStatusBtn{
+  padding-right: 8px;
+}
 
+#resetKeyEmail{
+  width: 100%;
+  padding-right: 40px;
+  padding-bottom: 10px
+
+}
+#rowGetKey{
+padding-left: 100px;
+  
+}
+#helpTitle{
+  padding-right: 15px;
+}
+.btnhelp{
+  padding-top: 10px;
+}
+#getKeyBtn{
+  padding-left: 20px;
+ height: 35px;
+ width: 110px;
+font-size:12px;
+
+
+}
  
 
 /* form styling */
@@ -251,7 +278,7 @@ padding-left: 10px;
     border-top-left-radius:5px; border-top-right-radius:5px; }
 
 /* numbered buttons */
-#status-buttons                 { padding-left: 90px; }
+#status-buttons                 { padding-left: 71px; padding-top: 10px; }
 #status-buttons a               { color:#567884; display:inline-block; font-size:12px; margin-right:10px; text-align:center; text-transform:uppercase; }
 #status-buttons a:hover         { text-decoration:none; }
 #status-buttons span            { background:#080808; display:block; height:30px; margin:0 auto 10px; padding-top:5px; width:30px; 

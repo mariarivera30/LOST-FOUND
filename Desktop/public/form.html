@@ -5,7 +5,7 @@
   
   <div class="page-header text-center">
           <div class="layout">
-          <h1>LostFound</h1></div>
+          <h1><center>LostFound</center></h1></div>
   <div id="container" >
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -70,9 +70,10 @@
           <!-- add the active class if the state matches our ui-sref -->
          <div class="centre">
           <div id="status-buttons" class="text-center" >
-              <a class="centre" ui-sref-active="active" ng-click="gotoTop()" ui-sref=".reportlost"><span>*</span> Lost</a>
+              
+              <a id ="LostStatusBtn" class="centre" ui-sref-active="active" ng-click="gotoTop()" ui-sref=".reportlost"><span>*</span>Lost </a>
               <a  class="centre" ui-sref-active="active" ng-click="gotoTop()" ui-sref=".newsfeeds"><span>*</span> {{vm.translations.HOME}}</a>
-              <a class="centre" ui-sref-active="active" ng-click="gotoTop()" ui-sref=".reportfound"><span>*</span> Found</a>
+              <a class="centre" ui-sref-active="active" ng-click="gotoTop()" ui-sref=".reportfound"><span>*</span>Found</a>
           </div>
         </div>
       </div>
