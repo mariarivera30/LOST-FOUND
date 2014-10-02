@@ -5,7 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
+
 var http = require('http');
 var path = require('path');
 
@@ -13,7 +13,7 @@ var app = express();
 
 //var pg = require("pg");
 
-//var conString = "pg://postgres:PASS@localhost:5432/NAME";
+//var conString = "pg://postgres:casa7463@localhost:5432/oficinasMedicas";
 
 //var client = new pg.Client(conString);
 //client.connect();
@@ -47,25 +47,11 @@ app.all('/', function(req, res, next) {
 
 
 app.get('/', routes.index);
-app.get('/', routes.index);
-app.get('/users', user.list);
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
