@@ -1,6 +1,6 @@
 <div ng-controller="languageController">
 
-<div id = "AdminSearch">
+<div id = "AdminSearch" >
    <div class="col-xs-6 col-md-10">
               
                  <input type="text" class="form-control" placeholder={{vm.translations.SEARCH}} id="searchBarUsers">
@@ -32,7 +32,7 @@
   </div> -->
  
   <!-- Table -->
-  <table class="table">
+  <table class="table" ng-controller="formController">
         <thead>
           <tr>
             <th><center>{{vm.translations.SELECT}}</center></th>
@@ -41,12 +41,12 @@
             <th><center>{{vm.translations.EMAIL}}</center></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody ng-repeat="user in users">
+          <tr >
             <td><input type="checkbox" name="users" value=" "></td>
-            <td>Angel</td>
-            <td>De La Torre</td>
-            <td>angel.delatorre@upr.edu</td>
+            <td>{{user.firstname}}</td>
+           <td>{{user.lastname}}</td>
+            <td>{{user.email}}</td>
           </tr>
           
         </tbody>

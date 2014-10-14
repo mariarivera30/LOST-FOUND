@@ -11,16 +11,17 @@ var path = require('path');
 
 var app = express();
 
-//var pg = require("pg");
+var pg = require("pg");
 
-//var conString = "pg://postgres:casa7463@localhost:5432/oficinasMedicas";
 
-//var client = new pg.Client(conString);
-//client.connect();
+var conString = "pg://postgres:postgres@localhost:5432/lostfoundDB";
+
+var client = new pg.Client(conString);
+client.connect();
 
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.favicon());
@@ -47,8 +48,7 @@ app.all('/', function(req, res, next) {
 
 
 app.get('/', routes.index);
-
-
+app.get('/allUsers', routes.getUsers);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

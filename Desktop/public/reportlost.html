@@ -38,7 +38,7 @@
 <ul class="list-group">
   <li class="list-group-item" ng-repeat="item in items" >
     <div class="row">
-  <div class="col-xs-6 col-md-4"><div class="itemimg"><img ui-sref="form.viewitem" ng-click="gotoTop()" src="http://www.quick-return-cleaners.co.uk/sitebuildercontent/sitebuilderpictures/keys.jpg" height="200" width="200"  > </div></div>
+  <div class="col-xs-6 col-md-4"><div class="itemimg"><img ng-src="{{item.IMG}}"  ui-sref="form.viewitem" height="200" width="200"> </div></div>
   <div class="col-xs-6 col-md-4"><h2 ><CENTER>{{item.status}}</CENTER></h2><h4><CENTER> {{vm.translations.ITEMID}} {{item.itemId}}</CENTER></h4><h4><CENTER>{{item.location}}</CENTER></h4><h4><center> {{vm.translations.SEENBY}}: {{item.views}}</center></h4>
  </div>
   <div class="col-xs-6 col-md-4">  
@@ -50,7 +50,7 @@
  
  <center>
 
- <button type="down" class="btn btn-large center"><span class="glyphicon glyphicon-thumbs-down"></span> </button></center></div>
+ <button type="down" class="btn btn-large center"><span class="glyphicon glyphicon-thumbs-down custom"></span> </button></center></div>
  </div>
 </div>
 

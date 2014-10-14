@@ -7,23 +7,39 @@
     
      <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/local.bootstrap.min.css">
      <link rel="stylesheet" href="style.css">
-    
+   
     <!-- JS -->
     <!-- load angular, nganimate, and ui-router -->
    
   
   
     <script src="angular-1.2.22/local.angular.min.js"></script>
-    <script src="angular-1.2.22/local.angular-ui-router.min.js"></script>
+     <script src="angular-1.2.22/local.angular-ui-router.min.js"></script>
+         
+   
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
      <script src="angular-1.2.22/angular-resource.js"></script>
-     <script src="angular-1.2.22/angular.js"></script>
+
     <script src="angular-1.2.22/local.angular-animate.min.js"></script>
-    <script src="client.js"></script>
-    <script src="images/HomePage.png"></script>
+
+    <script src="/client.js"></script>
+    <script src="controllers/module1.js"></script>
+   
+      <script src="Services/httpService.js"></script>
+     <script src="controllers/formController.js"></script>
+      <script src="Services/translationService.js"></script>
+ <script src="controllers/languageController.js"></script>
+
+    <script src="controllers/categoryController.js"></script>
+    <script src="controllers/itemViewController.js"></script>
+    
+    <script src="controllers/ScrollController.js"></script>
+    
+  
 
         
 </head>
-<body ng-app="formApp">
+<body data-ng-app="app">
 
 <!-- views will be injected here -->
 <div  class="container" ng-controller="ScrollController" >

@@ -26,7 +26,7 @@
                   
                   
                     <li>
-                        <a id="Adminlabel" ui-sref="form.admin" ng-click="gotoTop()" position="absolute" >  {{vm.translations.ADMIN}}</a>
+                        <a id="Adminlabel" ui-sref="form.admin.login" ng-click="gotoTop()" position="absolute" >  {{vm.translations.ADMIN}}</a>
 
                     </li>
                     <li>
@@ -81,7 +81,7 @@
       <!-- use ng-submit to catch the form submission and use our Angular function -->
       <form id="signup-form" ng-submit="processForm()">
           <!-- our nested state views will be injected here -->
-          <div id="form-views" ui-view></div>
+          <div id="form-views" ui-view class="ng-scope"></div>
       </form>
       
 

@@ -28,6 +28,18 @@ div.centre
   margin-right: 50px;
 }
 
+.custom{
+  color:#2F4F4F;
+  opacity:1;
+}
+
+.custom:active{
+  color:red
+}
+    .img-responsive{
+
+        padding-top:40px;
+        }
 #btnContactUs{
   padding-left: 30px;
 }

@@ -1,21 +1,14 @@
 <div class="container" ng-controller="languageController">
-
     <div class="row">
-
-
         <div class="form-group">
-
-
-
             <div id = "paddingCommentBox"class="col-md-8">
                 <div class="well well-sm">
-                    <form>
-                        <div class="row">
+                    <div class="row">
 
-                            <div id = "forTextArea"class="col-md-6">
-                                <div class="form-group">
+                        <div id = "forTextArea"class="col-md-6">
+                            <div class="form-group">
 
-                                    <div class ="fields">
+                                <div class ="fields">
 
                                         <label for="Email">
                                             {{vm.translations.EMAIL}}</label>
@@ -24,8 +17,8 @@
                                             <label for="phone">
                                                 {{vm.translations.PHONENUM}}</label>
                                                 <input type="input" class="form-control" id="location" placeholder=" {{vm.translations.PHONENUM}} ">
-                                            </div>
-                                        </div>
+                                </div>
+                             </div>
 
 
                                         <label for="name">
@@ -43,20 +36,9 @@
                                                 <button type="submit" class="btn btn-primary " id="addCommentButton" ng-click="gotoTop()" ui-sref="form.viewitem">
                                                     {{vm.translations.ADD}}</button>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                           
+                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
